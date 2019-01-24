@@ -1,0 +1,1587 @@
+<html>
+  <title>Battle Grounds</title>
+	<head>  
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:app_id" content="266274750719579"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://battle.itrix.in/#1/" />
+    <meta property="og:url" content="http://battle.itrix.in/#2/" />
+    <meta property="og:url" content="http://battle.itrix.in/#3/" />
+    <meta property="og:url" content="http://battle.itrix.in/#4/" />
+    <meta property="og:url" content="http://battle.itrix.in/#5/" />
+    <meta property="og:url" content="http://battle.itrix.in/#6/" />
+    <meta property="og:url" content="http://battle.itrix.in/#7/" />
+    <meta property="og:url" content="http://battle.itrix.in/#8/" />
+    <meta property="og:url" content="http://battle.itrix.in/#9/" />
+    <meta property="og:url" content="http://battle.itrix.in/#10/" />
+    <meta property="og:url" content="http://battle.itrix.in/#11/" />
+    <meta property="og:url" content="http://battle.itrix.in/#12/" />
+    <meta property="og:url" content="http://battle.itrix.in/#13/" />
+    <meta property="og:url" content="http://battle.itrix.in/#14/" />
+    <meta property="og:url" content="http://battle.itrix.in/#15/" />
+    <meta property="og:url" content="http://battle.itrix.in/#16/" />
+    <meta property="og:url" content="http://battle.itrix.in/#17/" />
+    <meta property="og:url" content="http://battle.itrix.in/#18/" />
+    <meta property="og:url" content="http://battle.itrix.in/#19/" />
+    <meta property="og:url" content="http://battle.itrix.in/#20/" />
+    <meta property="og:title" content="battlegrounds"  />
+    <meta property="og:image" content="http://battle.itrix.in/logo.png" />
+    <meta property="og:description" content="http://samples.ogp.me/390580850990722" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.10.2/bodymovin_light.min.js"></script>
+        <script src="https://unpkg.com/classnames@2.2.5"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script src="//static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js"></script><script src="//static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script><meta charset="UTF-8"><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico"><link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111"><link rel="canonical" href="https://codepen.io/yasser-mas/pen/pyWPJd">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <link rel="canonical" href="https://codepen.io/bradtraversy/pen/zEOrPp">
+    <script type="text/javascript" async="" src="https://cdn.heapanalytics.com/js/heap-2625472963.js"></script> 
+    <script type="text/javascript" charset="utf-8" async="" src="https://static.codepen.io/assets/packs/0-0290855ab977e8ae720a.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+   <link rel="icon" href="icon.png" type="image/png" sizes="16x16"> 
+	<style type="text/css">
+         body{
+             color: #eee;
+  font-family: 'Share Tech Mono', monospace;
+         }
+    </style>
+    <style class="cp-pen-styles">
+            table th , table td{
+            text-align: center;
+            }
+            table{
+              color: white;
+              font-style: bold;
+              font-size: 20px;
+              background-color: rgba(0, 0, 0,0.9);
+            }
+            thead tr:hover{
+            color:#ff9900;
+              }
+            tr:hover{
+            color: black;
+            }
+            thead:hover{
+            color:#ff9900;
+            }
+            .pagination li:hover{
+              cursor: pointer;
+            }
+      </style>
+<style>
+  @-webkit-keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body {
+   background: url("back.png") no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   color: #eee;
+}
+.hidden {
+  display: none;
+}
+.password {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 60px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.granted {
+  position: absolute;
+  top: 75%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.info p {
+  margin: 10px;
+}
+.button {
+  background-color: #111;
+  border: solid 1px #888;
+  padding: 8px 25px;
+  font-size: 26px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.rerun {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+.logout {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+.start {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.blink {
+  -webkit-animation: blink 0.8s steps(1, start) infinite alternate;
+          animation: blink 0.8s steps(1, start) infinite alternate;
+} 
+ #imag{
+   margin-left:0px;
+ }
+ #mar{
+   margin-bottom: 120px;
+ }
+ .form-group{
+   width: 20%;
+ }
+ input[type=text]{
+   color: #111;
+ }
+ #tableid{
+   width:40%;
+ }
+ #table-id{
+   width:40%;
+ }
+ #wit{
+     width:200px;
+     height:200px;
+   }
+   #display{
+     margin-top: -35px;
+   }
+   #name{
+     
+   }
+ @media only screen and (max-width: 768px) {
+   #name{
+     margin-right: auto;
+   }
+   
+  #about,#quer,#board,#gamepage,#rules,.navbar-toggle{
+    margin-top:40px;
+  }
+    #wit{
+      width:100px;
+      height: 100px;
+    }
+   #profile{
+     font-size:15px;
+   }
+#display{
+   margin-right:auto;
+ }
+ 
+ #imag{
+   margin-left:auto;
+ }
+ 
+ #tableid{
+   width:100%;
+ }
+ #table-id{
+   width: 100%;
+ }
+ .navicon{
+   margin-top:0px;
+ }
+}
+</style>
+<!--progress bar style-->
+<style class="cp-pen-styles"> 
+.step-bar-wrapper{
+  font-size:0;
+  background:#fff;
+  text-align:center;padding:50px 0 0;
+  box-shadow:5px 5px 24px 0px rgba(32, 32, 32, 0.2);
+  width:600px;
+  margin:30px auto 0;
+  position:relative;
+  z-index:5;
+  border-radius:10px
+}
+a{
+  color:rgb(72, 78, 83);/* change primary color */
+}
+.step-wrapper{
+  padding:0;
+  margin:0;
+  font-size:0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  counter-reset: step;
+  tr
+}
+.step-wrapper li{
+  width:80px;
+}
+.step-wrapper li > a:before {
+	content:'';
+	width: 36px;
+	height: 36px;
+	display: block;
+	font-size: 16px;
+  font-weight:700;
+  background-color: transparent;
+	border-radius: 100%;
+  z-index:1;
+  position:absolute;
+  text-align:center;
+}
+.step-wrapper li > a:after {
+	content: counter(step);
+	counter-increment: step;
+	width: 36px;
+	line-height: 36px;
+	display: block;
+	font-size: 16px;
+  color:rgb(231, 40, 40);
+  font-weight:700;
+  background-color: transparent;
+	border-radius: 100%;
+  z-index:1;
+  position:absolute;
+  text-align:center;
+}
+.step-wrapper li.completed > a:after {
+  content:'\2713';
+  color: currentColor;
+}
+.step-wrapper li:first-of-type a:before,
+.step-wrapper li:first-of-type a:after{
+  margin-left:-21px;
+}
+.step-wrapper li:last-of-type > a:before,
+.step-wrapper li:last-of-type > a:after{
+  margin-left:21px;
+}
+.step-wrapper li.completed > a:before{
+  background: #fff;
+  color:#c4c4c4;
+  -webkit-box-shadow:0px 2px 4px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.15);
+}
+.step-wrapper li.active > a:before{
+  background-color: currentColor;
+  -webkit-box-shadow:0px 2px 4px 0px rgba(0,0,0,0.15), inset 0px 0px 0px 2px rgba(0,0,0,0.15), 0px 0px 21px 0px currentColor;
+  box-shadow:0px 2px 4px 0px rgba(0,0,0,0.15), inset 0px 0px 0px 2px rgba(0,0,0,0.15), 0px 0px 21px 0px currentColor;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(247, 247, 247,0.5)), to(rgba(231, 231, 231,.01)));
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(247, 247, 247,0.5)), to(rgba(231, 231, 231,.01)));
+    background-image: -webkit-linear-gradient(top, rgba(247, 247, 247,0.5), rgba(231, 231, 231,.01));
+    background-image: -moz-linear-gradient(top, rgba(247, 247, 247,0.5), rgba(231, 231, 231,.01));
+    background-image: -ms-linear-gradient(top, rgba(247, 247, 247,0.5), rgba(231, 231, 231,.01));
+    background-image: -o-linear-gradient(top, rgba(247, 247, 247,0.5), rgba(231, 231, 231,.01));
+}
+.step-wrapper li.active > a:after{
+  color:#fff;
+}
+.step-wrapper li span{
+  display:block;
+  width:100%;
+  text-align:center;
+  margin-bottom:15px;
+}
+.step-wrapper li span a{
+  font-size: 14px;
+  font-weight:700;
+}
+.step-wrapper li:not(.active):not(.completed) span a{
+  color: #bbb;
+}
+.step-wrapper li > a{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow:hidden;
+  height:48px
+}
+.step-wrapper li:first-of-type > a{
+  padding-left: 40px;
+}
+.step-wrapper li:last-of-type > a{
+  padding-right:40px;
+}
+.step-wrapper li > a svg{
+  height: 48px;
+  min-height: 48px;
+  width: auto;
+  position: absolute;
+  display: inline-block;
+  stroke-width: 0;
+  transition:all 300ms ease-in-out;
+}
+.step-wrapper li > a svg{
+  filter:url(#inset-shadow);
+}
+a.button{
+  margin:50px 15px;
+  display:inline-block;
+  border-radius:4px;
+  width:100px;
+  height:50px;
+  text-align:center;
+  line-height:50px;
+  background-color: currentColor;
+  -webkit-box-shadow:0px 2px 4px 0px rgba(0,0,0,0.15), inset 0px 0px 0px 2px rgba(0,0,0,0.15), 0px 0px 21px 0px currentColor;
+  box-shadow:0px 2px 4px 0px rgba(0,0,0,0.15), inset 0px 0px 0px 2px rgba(0,0,0,0.15), 0px 0px 21px 0px currentColor;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(247, 247, 247,0.5)), to(rgba(231, 231, 231,.01)));
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(247, 247, 247,0.5)), to(rgba(231, 231, 231,.01)));
+    background-image: -webkit-linear-gradient(top, rgba(247, 247, 247,0.5), rgba(231, 231, 231,.01));
+    background-image: -moz-linear-gradient(top, rgba(247, 247, 247,0.5), rgba(231, 231, 231,.01));
+    background-image: -ms-linear-gradient(top, rgba(247, 247, 247,0.5), rgba(231, 231, 231,.01));
+    background-image: -o-linear-gradient(top, rgba(247, 247, 247,0.5), rgba(231, 231, 231,.01));
+}
+a.button span{color:#fff;font-size:16pxf;}
+</style>
+<script>
+  
+  function leaderboard()
+                   {  
+                      $('#tableid').find('thead').remove();
+                      $('#tableid').find('tbody').remove();
+                      $('#table-id').find('thead').remove();
+                      $('#table-id').find('tbody').remove();
+                      $.get("/leader", function(data, status){
+                      var len=data.details.length;
+                      var i;
+                      var rank;
+                      $('#tableid').append("<thead><tr><th>Rank</th><th>Name</th><th>Level</th></tr></thead>");
+                      for(i=0;i<len;i++)
+                      {
+                        if(data.details[i]._id == data.usr)
+                        {
+                          rank=i+1;
+                        $('#tableid').append("<tbody style='color:#ff9900;'><tr><th>"+(i+1)+"</th><th>"+data.details[i].name+"</th><th>"+data.details[i].level+"</th></tr></tbody>");
+                      }
+                      }
+                      $('#table-id').append("<thead><tr><th>Rank</th><th>Name</th><th>Level</th></tr></thead>");
+                      for(i=0;i<len;i++)
+                      {
+                        $('#table-id').append("<tbody><tr><td>"+(i+1)+"</td><td>"+data.details[i].name+"</td><td>"+data.details[i].level+"</td></tr></tbody>");
+                      }
+                    });
+                   }
+  $(document).ready(function(){
+    leaderboard();
+      $('#board').hide();
+      $(".nav").hide();
+      $('#query1').hide();
+      $('#query2').hide();
+      $('#query3').hide();
+      $('#query4').hide();
+      $('#query5').hide();
+      $('#query6').hide();
+      $('#query7').hide();
+      $('#query8').hide();
+      $('#query9').hide();
+      $('#query10').hide();
+      $('#query11').hide();
+      $('#query12').hide();
+      $('#query13').hide();
+      $('#query14').hide();
+      $('#query15').hide();
+      $('#query16').hide();
+      $('#query17').hide();
+      $('#query18').hide();
+      $('#query19').hide();
+      $('#query20').hide();
+      $('#quer').hide();
+      $('#profile').hide();
+      $('#rules').hide();
+      $('#my-modal').hide();
+      $('#ans-modal').hide();
+      $('#about').hide();
+      $('#game').show();
+      uploads();
+      clueRef();
+        $('#ref').on('click',function(){
+          leaderboard();
+          clueRef();
+          });
+    function clueRef(){
+            $('#name').val("");
+            $("#cluebox1").find("p").remove();
+            $("#cluebox3").find("p").remove();
+            $("#cluebox2").find("p").remove();
+            $("#cluebtn1").prop('disabled',true);
+            $("#cluebtn2").prop('disabled',true);
+            $("#cluebtn3").prop('disabled',true);
+                $.get('/clues',function(result,status){
+                  console.log(result);
+                  console.log(result.clues[0]);
+                  var len=result.clues.length;
+                  var i=0;
+                  console.log(len);
+                  console.log(result.clues[0].clue);
+                    for(i=0;i<len;i++)
+                        {
+                          $("#cluebtn"+(i+1)).prop('disabled',false);
+                          $("#cluebox"+(i+1)).html("<p>CLUE-"+(i+1)+":"+result.clues[i].clue+"</p>");
+                          $("#cluebox"+(i+1)).hide();
+                        }
+                  });
+      }
+    $("#cluebtn1").click(function(){
+      leaderboard();
+      $("#cluebox2").hide();
+      $("#cluebox3").hide();
+      $("#cluebox1").toggle();
+    });
+  
+    $("#cluebtn2").click(function(){
+      leaderboard();
+      $("#cluebox1").hide();
+      $("#cluebox3").hide();
+      $("#cluebox2").toggle();
+    });
+  
+    $("#cluebtn3").click(function(){
+      leaderboard();
+      $("#cluebox1").hide();
+      $("#cluebox2").hide();
+      $("#cluebox3").toggle();
+    });
+   
+                
+function uploads(){
+  clueRef();
+ $.get("/upload", function(data, status){
+    console.log(data.files[0].filename);
+    var i;
+    var len=data.files.length;  
+    $("#display").find("img").remove();
+    $("#imag").find("img").remove();
+    $("#display").append("<img class='mySlides' class='img-fluid' style='max-width: 100%;' src=/image/"+data.files[0].filename+">");
+    for (i=1; i<len; i++){
+        $("#display").append("<img class='mySlides' class='img-fluid' src=/image/"+data.files[i].filename+" style='max-width: 100%;display:none'>");
+        }
+         
+    for(i=0;i<len;i++){
+      $("#imag").append("<div id='image' class='w3-col s4'><img class='demo w3-opacity w3-hover-opacity-off' src=/image/"+data.files[i].filename+" style='width:100%;cursor:pointer' onclick='currentDiv("+(i+1)+")'></div>");        
+    }
+    });
+  }
+  prog();
+$("#ansbt").on('click',function(){
+  var answer =  $("#name").val(); 
+  var leve;
+        $.get( "/query",function(data,status){leve=data.que;
+        });
+  $.ajax({
+      type: "post",
+      data:{answer:answer},
+      url: "/validate",
+      success: function(resultData){
+        if(resultData.flag == 2)
+        {
+          location.href = "/finish";
+        }
+          if(resultData.flag)
+      {
+        leaderboard();     
+        console.log("tytytytytytytytty");
+$.get('/notif',function(data,status){  
+             oldlen=data.notification.length;
+});
+        uploads();
+        $('#ans-modal').show();
+ $("#crt").html("correct!");
+ $('#giff').html("<img id='wit' src='"+leve+".gif' >");
+      prog();
+      }
+      else{
+         leaderboard();     
+        uploads();
+        $('#ans-modal').show();
+$("#crt").html("Sorry try again!");
+$('#giff').html("<img id='wit' src='w"+leve+".gif' >");
+      }
+      }     
+});
+ access();
+ $(".hiding").addClass('hidden');
+	$('.info p:last-child, .password').removeClass('hidden');
+});
+console.log("uuuuuuuuuuuuuuuuuu"+{{user.level}});
+});
+var oldlen=0;
+$(document).ready(function(){
+
+$.get('/notif',function(data,status){  
+             oldlen=data.notification.length;
+});
+});
+setInterval(function(){
+        $.get('/notif',function(data,status){  
+            var len=data.notification.length;
+            var i;
+            if(oldlen < len){
+              
+              $('#my-modal').show();
+            }
+            oldlen=len;
+          });
+      },10000);
+console.log("uuuuuuuuuuuuuuuuuu"+{{user.level}});
+function prog(){
+  var i;
+  $.get('/query',function(data,status){
+      console.log("uuuuuuuuuuuuuuuuuu"+data.que);
+  for(i=1;i<data.que;i++)
+  {
+  $('#p'+i).addClass("completed").removeClass("active").next('li').addClass("active");
+  }
+  });
+  
+}
+</script>
+<!-- ######  -->
+	</head>
+<body>
+  <a href="https://itrix.in" ><img src="logo.png" id="logo"></a>
+  <div class="fontbody">
+   
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=266274750719579&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script><!--
+        <button class="btn btn-warning active" id="gam">Game</button>
+        <button class="btn active" id="leader">Leader board</button>
+        <button class="btn btn-info active" id="queries">Queries</button>
+        <button class="btn btn-info active" id="pro">Profile</button>
+        <a href="/logout"><button  class="btn btn-info active" >Logout</button></a>
+
+           -->
+
+
+<style>
+.top{
+  top:0px;
+  margin-top:-19px;
+}
+.nav{
+  margin:0px  110px;
+  margin-top:40px;
+  margin-left: 130px;
+  transition:all 300ms ease-in-out;
+  background:#eee;
+  transform:scaleX(0);
+}
+.nav.open{
+  transform:scaleX(1);
+  border-radius:100px;
+}
+.nav ul{
+  padding:8px;margin:0;
+}
+.nav li{
+  display:inline-block;
+  color:#111;
+  font-family:sans-serif;
+  padding:5px;
+}
+.navicon{
+  width:40px;
+  height:40px;
+  position:relative;
+  top:-48px;
+  background:#eee;
+  border-radius:100%;
+  transition:300ms all ease-in-out;
+}
+.navicon.open .bar:first-child{transform:rotate(45deg);top:22px;}
+.navicon.open .bar:last-child{transform:rotate(-45deg);top:12px;}
+.navicon.open .bar.middle{
+  opacity:0;
+}
+.navicon.open{
+  top:-54px;
+}
+.navicon .bar{
+  background:rgb(113, 118, 119);
+  width:30px;
+  height:5px;
+  border-radius:20px;
+  position:relative;
+  top:4px;
+  transition:300ms all ease-in-out;
+}
+.navicon .bar.first{
+  top:6px;
+}
+.fixed{
+  position:fixed;
+  top:0px;
+  left:0px;
+  right:0px;
+  margin:0px;
+}
+.navicon .bar.last{top:8px;}
+.navicon .bar.first{top:27px;}
+.content{
+  margin-top:220px;
+  color:#eee;
+  font-family:sans-serif;
+}
+.navicon.open-top{
+  top:104px !important;
+}
+.navicon.open-top .bar.middle{
+  opacity:1;
+  transform:rotate(90deg);
+  top:16px;
+}
+.navicon.open-top .bar.first{
+  width:15px;
+  top:12px;
+  left:4px;
+  transform:rotate(45deg);
+}
+.navicon.open-top .bar.last{
+  width:15px;
+  top:2px;
+  left:-4px;
+  transform:rotate(-45deg);
+}
+
+.nav li:hover{
+  color: white;
+  background-color: black;
+}
+.nav .active{
+  border-bottom: 7px solid black;
+  border-top: 7px solid black;
+}
+
+#game{
+  margin-top:-50px;
+}
+#about,#quer,#board,#gamepage{
+        
+        box-sizing  : border-box;
+        border-radius: 8px;
+        width: 80%;
+        color: #fff;
+        background-color: rgba(0, 0, 0,0.9);
+        box-shadow: 0 0 16px rgb(255, 255, 255);
+        font-family: 'Teko', sans-serif;
+        font-size:30px;
+        word-spacing: 20px;
+        padding: 10px;
+    }
+  #profile,#quer,#rules{
+    margin-top:20px;
+  }
+  
+  #rules{
+    /*border:2px solid black;*/
+    height:400px;
+     overflow-y: auto;
+     box-sizing: border-box;
+        border-radius: 8px;
+        width: 50%;
+        background-color: rgba(0, 0, 0,0.9);
+        box-shadow: 0 0 16px rgb(255, 255, 255);
+        color: #fff;
+        font-family: 'Teko', sans-serif;
+        font-size:30px;
+        word-spacing: 20px;
+  }
+/* width */
+.rul::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.rul::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.rul::-webkit-scrollbar-thumb {
+  background: darkgrey; 
+  height: 10px;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.rul::-webkit-scrollbar-thumb:hover {
+  background: black; 
+}
+
+#profile{
+        box-sizing: border-box;
+        border-radius: 8px;
+        width: 50%;
+        background-color: rgba(0, 0, 0,0.9);
+        box-shadow: 0 0 16px rgb(255, 255, 255);
+        color: #fff;
+        font-family: 'Teko', sans-serif;
+        font-size:30px;
+        word-spacing: 20px;
+    }
+  #title_message {
+    margin-top: -19px;
+  } 
+    @media screen and (max-width: 1000px) {
+  #title_message {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+  #rules{
+    width: 300px;
+  }
+  #rul{
+    margin-top: 400px;
+  }
+  #logo{
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+}
+}
+</style>
+<div class="logpop">
+  <style>
+.modal1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 100px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  border: 3px solid black;
+  border-radius: 15px;
+  background: rgba(197, 157, 71, 0.808);
+  box-shadow: 8px 8px 0 rgba(255, 253, 253, 0.2);
+}
+.message {
+  font-size:1.1rem;
+  margin-bottom: 1.6rem;
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn-info{
+    background-color: #111;
+  }
+.btn {
+    font-family:inherit;
+  font-size: inherit;
+  background: rgba(138, 131, 131, 0.582);
+  padding: 0.3rem 2rem;
+  border: 3px solid black;
+  margin-right: 2.6rem;
+  box-shadow: 0 0 0 rgb(27, 27, 27);
+  transition: all 0.2s;
+}
+
+.btn:last-child {
+  margin: 0;
+}
+
+.btn:hover {
+  box-shadow: 0.4rem 0.4rem 0 rgb(46, 175, 14);
+  transform: translate(-0.4rem, -0.4rem);
+  color:rgb(160, 157, 157);
+}
+
+.btn:active {
+  box-shadow: 0 0 0 black;
+  transform: translate(0, 0);
+}
+
+}
+#logo{
+  position: fixed;
+    top: 0;
+    left: 0;
+    width:120px; 
+}
+  </style>
+</div>
+<script>
+  $(document).ready(function(){
+    
+     $(".nav").toggleClass('open');
+  })
+</script>
+<script>
+
+</script> 
+<div class="top">
+  <div align="center">
+      <button type="button" style="background-color:rgb(255, 255, 255);" class="navbar-toggle">
+        <span class="icon-bar" style="background-color:black;"></span>
+        <span class="icon-bar" style="background-color:black;"></span>
+        <span class="icon-bar" style="background-color:black;"></span>                        
+      </button>
+  <div class="nav collapse navbar-collapse" id="mynav">
+    <ul>  
+      <a id="gam" href="#"><li class="navbtn active" style="font-family: 'Teko', sans-serif;font-size:25px;" >Game</li></a>
+      <a id="leader" href="#" ><li class="navbtn" style="font-family: 'Teko', sans-serif;font-size:25px;">Leaderboard</li></a>
+      <a id="pro" href="#" ><li class="navbtn" style="font-family: 'Teko', sans-serif;font-size:25px;">Profile</li></a>
+      <a id="queries" href="#"><li class="navbtn" style="font-family: 'Teko', sans-serif;font-size:25px;">Queries</li></a>
+      <a id="rule" href="#"><li class="navbtn" style="font-family: 'Teko', sans-serif;font-size:25px;">Rules</li></a>
+      <a id="aboutus" href="#"><li class="navbtn" style="font-family: 'Teko', sans-serif;font-size:25px;">Our team</li></a>
+      <a href="/logout" id="log"><li class="navbtn" style="font-family: 'Teko', sans-serif;font-size:25px;">Logout</li></a>  
+  </div>
+ 
+
+<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("mynav");
+var btns = header.getElementsByClassName("navbtn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
+</div>
+  </div>
+   
+<script>
+  
+  $('.navbar-toggle').click(function(){
+    $(".nav").slideToggle('slow');
+  });
+  
+
+
+</script>
+<!--NAVBAR ENDS -->
+
+<div id="mod">
+<style class="cp-pen-styles">
+  :root {
+  --modal-duration: 1s;
+  --modal-color: #3a3936;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 10%;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: 10% auto;
+  width: 60%;
+  box-shadow: 0 5px 8px 0 rgb(255, 255, 255), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background: #fff;
+  color: var(--modal-color);
+}
+
+.modal-footer {
+  background: var(--modal-color);
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.ans-close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.ans-close:hover,
+.ans-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.container #quer{
+  width:50%;
+}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <div id="my-modal" class="modal" style="display: block;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="modal-btn" class="close">×</span>
+        <center><h2>New Notification</h2></center>  
+      </div>
+      <div class="modal-body">      
+          <center><h3>Clue Updated.</h3></center>
+      </div>
+      <div class="modal-footer">
+        <h3>Please refresh your clues</h3>
+      </div>
+    </div>
+  </div>
+<script>// Get DOM Elements
+
+const modal = document.querySelector('#my-modal');
+const modalBtn = document.querySelector('#modal-btn');
+const closeBtn = document.querySelector('.close');
+
+// Events
+modalBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+
+
+// Open
+function openModal() {
+  modal.style.display = 'block';
+}
+
+// Close
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+
+//# sourceURL=pen.js
+</script>
+</div>
+<div id="ans-modal" class="modal" style="display: block;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="ans-btn" class="ans-close">×</span>
+        <center><h2  id="crt"></h2></center>  
+      </div>
+      <div class="modal-body">      
+          <center id="giff"></center>
+      </div>
+      <div class="modal-footer">
+        <h3></h3>
+      </div>
+    </div>
+  </div>
+    
+    <script>// Get DOM Elements
+$('.ans-close').click(function(){
+  $('#ans-modal').hide();
+});
+//# sourceURL=pen.js
+</script>
+<br>
+<br>
+
+<br>
+<br>
+<div class="container"  id="quer">
+    <div id="query1" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#1" data-numposts="5"></div> 
+    <div id="query2" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#2" data-numposts="5"></div> 
+    <div id="query3" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#3" data-numposts="5"></div> 
+    <div id="query4" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#4" data-numposts="5"></div> 
+    <div id="query5" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#5" data-numposts="5"></div> 
+    <div id="query6" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#6" data-numposts="5"></div> 
+    <div id="query7" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#7" data-numposts="5"></div> 
+    <div id="query8" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#8" data-numposts="5"></div> 
+    <div id="query9" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#9" data-numposts="5"></div> 
+    <div id="query10" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#10" data-numposts="5"></div> 
+    <div id="query11" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#11" data-numposts="5"></div> 
+    <div id="query12" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#12" data-numposts="5"></div> 
+    <div id="query13" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#13" data-numposts="5"></div> 
+    <div id="query14" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#14" data-numposts="5"></div> 
+    <div id="query15" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#15" data-numposts="5"></div> 
+    <div id="query16" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#16" data-numposts="5"></div> 
+    <div id="query17" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#17" data-numposts="5"></div> 
+    <div id="query18" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#18" data-numposts="5"></div> 
+    <div id="query19" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#19" data-numposts="5"></div> 
+    <div id="query20" style="width:70%;" class="fb-comments" data-colorscheme="dark" data-mobile="Auto-detected" data-href="http://battle.itrix.in/#20" data-numposts="5"></div> 
+  </div>
+<div class="container" id="profile">
+
+</div>
+<div class="container rul" id="rules">
+  <div class="rul">
+<ul style="list-style-type:circle">
+  <li>
+The event consists of a series of questions with a set of three images that has to be solved to advance to the next question.
+</li>
+<li>
+Interpret the given images for the question and try to figure out the answer.</li>
+<li>There is absolutely no preparation or previous experience needed.</li>
+<li>You can use the help of Google, or your “know-it-all” friend, anything else and anyone else.</li>
+<li>The moderators are there to monitor the progress of players and glitches/bugs.</li>
+<li>Clues will be provided to the question if a lot of users get stuck in one question and find it hard to figure out the answer. </li>
+<li>The moderator’s decision will be final.</li>
+</ul>
+</div>
+</div>
+    <center><div id="game">
+      <!-- progress bar--->
+    <div id="title_message">
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;margin-bottom:20px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <filter id="inset-shadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feComponentTransfer in="SourceAlpha">
+            <feFuncA type="table" tableValues="1 0"></feFuncA>
+          </feComponentTransfer>
+          <feGaussianBlur stdDeviation="1.2"></feGaussianBlur>
+          <feOffset dx="0" dy="0.5" result="offsetblur"></feOffset>
+          <feFlood flood-color="rgba(0, 0, 0, 0.5)" result="color"></feFlood>
+          <feComposite in2="offsetblur" operator="in"></feComposite>
+          <feComposite in2="SourceAlpha" operator="in"></feComposite>
+          <feMerge>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            <feMergeNode></feMergeNode>
+          </feMerge>
+        </filter>
+        <symbol id="icon-left" viewBox="0 0 61 32">
+          <title>left</title>
+          <path id="first" fill="#ececec" d="M59.992 13.423h-23.73c-2.481 0-4.708-1.527-5.726-3.817-2.608-5.726-8.652-9.543-15.459-8.843-7.316 0.763-13.233 6.871-13.678 14.251-0.573 8.907 6.489 16.223 15.268 16.223 6.235 0 11.579-3.69 13.932-9.034 1.018-2.29 3.372-3.69 5.853-3.69h23.539v-5.089z"></path>
+        </symbol>
+        <symbol id="icon-mid" viewBox="0 0 89 32">
+          <title>mid</title>
+          <path id="mid" fill="#ececec" d="M64.26 13.501c-2.531 0-4.803-1.558-5.842-3.895-2.272-4.868-6.945-8.373-12.592-8.957-0.065 0-0.065 0-0.13 0s-0.065 0-0.13 0c-0.325 0-0.584-0.065-0.909-0.065-0.195 0-0.389 0-0.519 0-0.195 0-0.389 0-0.519 0-0.325 0-0.584 0-0.909 0.065-0.065 0-0.065 0-0.13 0s-0.065 0-0.13 0c-5.582 0.584-10.32 4.089-12.527 9.022-1.039 2.337-3.31 3.895-5.842 3.895h-24.146v5.193h24.016c2.531 0 4.933 1.428 5.972 3.765 2.207 4.998 6.945 8.568 12.592 9.152 0 0 0.065 0 0.065 0 0.195 0 0.454 0.065 0.649 0.065 0.26 0 0.454 0 0.714 0 0.065 0 0.13 0 0.195 0 0 0 0 0 0.065 0 0 0 0 0 0.065 0s0.13 0 0.195 0c0.26 0 0.454 0 0.714 0 0.195 0 0.454 0 0.649-0.065 0 0 0.065 0 0.065 0 5.647-0.584 10.385-4.154 12.592-9.152 1.039-2.337 3.44-3.765 5.972-3.765h24.016v-5.193h-24.211z"></path>
+        </symbol>
+        <symbol id="icon-right" viewBox="0 0 61 32">
+          <title>right</title>
+          <path id="last" fill="#ececec" d="M1.4 13.423h23.666c2.481 0 4.708-1.527 5.726-3.817 2.608-5.726 8.652-9.543 15.459-8.843 7.38 0.763 13.233 6.871 13.678 14.251 0.573 8.907-6.489 16.223-15.268 16.223-6.235 0-11.579-3.69-13.932-9.034-1.018-2.29-3.372-3.69-5.853-3.69h-23.539v-5.089z"></path>
+        </symbol>
+      </defs>
+    
+
+    <ul class="step-wrapper" id="p">
+      <li class="active" id="p1">
+         <a>
+          <svg class="icon icon-left"><use xlink:href="#icon-left"></use></svg>
+        </a>
+      </li>
+      <li class="" id="p2">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>    
+      </li>
+      <li class="" id="p3">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      <li class="" id="p4">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      <li class="" id="p5">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      <li class="" id="p6">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      <li class="" id="p7">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      <li class="" id="p8">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      <li class="" id="p9">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      <li class="" id="p10">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      <li class="" id="p11">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      <li class="" id="p12">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      <li class="" id="p13">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      <li class="" id="p14">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      
+      <li class="" id="p15">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      
+      <li class="" id="p16">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      
+      <li class="" id="p17">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      
+      <li class="" id="p18">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      
+      <li class="" id="p19">
+       
+        <a>
+          <svg class="step step-mid"><use xlink:href="#icon-mid"></use></svg>
+        </a>
+      </li>
+      <li class="" id="p20">
+        <a>
+          <svg class="step step-right"><use xlink:href="#icon-right"></use></svg>
+        </a>
+      </li>
+    </ul>
+</svg>
+    </div>
+    <br>
+<script src="//static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $("#pr").click(function(){
+$(".step-wrapper li.active").addClass("completed").removeClass("active").next('li').addClass("active");
+  });
+    
+
+  $(".next").click(function () {
+  if ($(".step-wrapper li:last-child").hasClass('completed')) {
+    alert("completed");
+    return;
+  }
+  $(".step-wrapper li.active").addClass("completed").removeClass("active").next('li').addClass("active");
+});
+
+$(".previous").click(function () {
+  if ($(".step-wrapper li:first-child").hasClass('active')) {
+    alert("Already on first step");
+    return;
+  }
+  $(".step-wrapper li.active").removeClass("active completed").prev('li').addClass("active").removeClass('completed');
+  if ($(".step-wrapper li:last-child").hasClass('completed')) {
+    $(".step-wrapper li:last-child").removeClass('completed').addClass('active');
+  }
+});
+//# sourceURL=pen.js
+</script>
+
+<div id="gamepage">
+<div class="container">
+  <h1></h1>
+    <div class="row">
+      <div class="col-md-6">
+  <div id="display" class="w3-content" style="max-width"><br>
+  </div> 
+  </div>
+   <div class="col-md-6">
+     <div class="row">
+       <div class="col-md-10">
+         <center><div id="imag" class="w3-row-padding w3-section" style="max-width:250px;max-height:150px"></div></center><br>
+        <button class="btn active" id="cluebtn1" disabled>clue1</button>
+        <button  class="btn active" id="cluebtn2" value="clue2" disabled>clue2</button>
+        <button  class="btn active" id="cluebtn3" value="clue3" disabled>clue3</button><br>
+        <div id="cluebox1"></div>
+        <div id="cluebox2"></div>
+        <div id="cluebox3"></div>
+        <br>
+                <input id="name" name="answer" style="width:100%;" class="input-lg" type="text" required="required"><br><br>
+                <button  class="btn active" id="ansbt">ANSWER</button>
+                <span id="ref" class="glyphicon glyphicon-refresh" style="font-size:25px;cursor:pointer;"></span>
+       </div>
+       <div class="col-md-4"></div>
+     </div>
+    </div>
+  </div>
+  <h1></h1>   
+</div>
+</div>
+
+
+<script>
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+
+
+   
+</center>  
+<div id="board" class="container" style="">
+		<center>
+		  <table  id="table-id" class="table table-condensed table-bordered table-hover"></table>
+          <!--		Start Pagination -->
+          <table  id="tableid" class="table table-condensed table-bordered table-hover"></table>
+			<div class="pagination-container">
+				<nav>
+				  <ul class="pagination">
+            
+            <li data-page="prev">
+								     <span> &lt; <span class="sr-only">(current)</span></span>
+								    </li>
+				   <!--	Here the JS Function Will Add the Rows -->
+        <li data-page="1" class="active">								      <span>1<span class="sr-only">(current)</span></span>								    </li><li data-page="2">								      <span>2<span class="sr-only">(current)</span></span>								    </li><li data-page="3">								      <span>3<span class="sr-only">(current)</span></span>								    </li><li data-page="4">								      <span>4<span class="sr-only">(current)</span></span>								    </li><li data-page="5">								      <span>5<span class="sr-only">(current)</span></span>								    </li><li data-page="6">								      <span>6<span class="sr-only">(current)</span></span>								    </li><li data-page="7">								      <span>7<span class="sr-only">(current)</span></span>								    </li><li data-page="8">								      <span>8<span class="sr-only">(current)</span></span>								    </li><li data-page="9">								      <span>9<span class="sr-only">(current)</span></span>								    </li><li data-page="10">								      <span>10<span class="sr-only">(current)</span></span>								    </li><li data-page="11">								      <span>11<span class="sr-only">(current)</span></span>								    </li><li data-page="12">								      <span>12<span class="sr-only">(current)</span></span>								    </li><li data-page="13">								      <span>13<span class="sr-only">(current)</span></span>								    </li><li data-page="14">								      <span>14<span class="sr-only">(current)</span></span>								    </li><li data-page="15">								      <span>15<span class="sr-only">(current)</span></span>								    </li><li data-page="16">								      <span>16<span class="sr-only">(current)</span></span>								    </li><li data-page="17">								      <span>17<span class="sr-only">(current)</span></span>								    </li><li data-page="18">								      <span>18<span class="sr-only">(current)</span></span>								    </li><li data-page="19">								      <span>19<span class="sr-only">(current)</span></span>								    </li><li data-page="20">								      <span>20<span class="sr-only">(current)</span></span>								    </li><li data-page="21">								      <span>21<span class="sr-only">(current)</span></span>								    </li><li data-page="next" id="prev">
+								       <span> &gt; <span class="sr-only">(current)</span></span>
+								    </li>
+				  </ul>
+				</nav>
+			</div>
+    
+<script src="//static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script><script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>getPagination('#table-id');
+function getPagination(table) {
+
+	var lastPage = 1;
+
+	$('#leader').on('click', function (evt) {
+		lastPage = 1;
+		$('.pagination').find("li").slice(1, -1).remove();
+		var trnum = 0; // reset tr counter 
+		var maxRows=5; // get Max Rows from select option
+
+		if (maxRows == 5000) {
+
+			$('.pagination').hide();
+		} else {
+
+			$('.pagination').show();
+		}
+
+		var totalRows = $(table + ' tbody tr').length; // numbers of rows 
+		$(table + ' tr:gt(0)').each(function () {// each TR in  table and not the header
+			trnum++; // Start Counter 
+			if (trnum > maxRows) {// if tr number gt maxRows
+
+				$(this).hide(); // fade it out 
+			}if (trnum <= maxRows) {$(this).show();} // else fade in Important in case if it ..
+		}); //  was fade out to fade it in 
+		if (totalRows > maxRows) {// if tr total rows gt max rows option
+			var pagenum = Math.ceil(totalRows / maxRows); // ceil total(rows/maxrows) to get ..  
+			//	numbers of pages 
+			for (var i = 1; i <= pagenum;) {if (window.CP.shouldStopExecution(0)) break; // for each page append pagination li 
+				$('.pagination #prev').before('<li data-page="' + i + '">\
+								      <span>' + i++ + '<span class="sr-only">(current)</span></span>\
+								    </li>').show();
+			} // end for i 
+			window.CP.exitedLoop(0);} // end if row count > max rows
+		$('.pagination [data-page="1"]').addClass('active'); // add active class to the first li 
+		$('.pagination li').on('click', function (evt) {// on click each page
+			evt.stopImmediatePropagation();
+			evt.preventDefault();
+			var pageNum = $(this).attr('data-page'); // get it's number
+
+			var maxRows = 5 // get Max Rows from select option
+
+			if (pageNum == "prev") {
+				if (lastPage == 1) {return;}
+				pageNum = --lastPage;
+			}
+			if (pageNum == "next") {
+				if (lastPage == $('.pagination li').length - 2) {return;}
+				pageNum = ++lastPage;
+			}
+
+			lastPage = pageNum;
+			var trIndex = 0; // reset tr counter
+			$('.pagination li').removeClass('active'); // remove active class from all li 
+			$('.pagination [data-page="' + lastPage + '"]').addClass('active'); // add active class to the clicked 
+			// $(this).addClass('active');					// add active class to the clicked 
+			$(table + ' tr:gt(0)').each(function () {// each tr in table not the header
+				trIndex++; // tr index counter 
+				// if tr index gt maxRows*pageNum or lt maxRows*pageNum-maxRows fade if out
+				if (trIndex > maxRows * pageNum || trIndex <= maxRows * pageNum - maxRows) {
+					$(this).hide();
+				} else {$(this).show();} //else fade in 
+			}); // end of for each tr in table
+		}); // end of on click pagination list
+
+	});
+	// END OF PAGINATION 
+}
+$(function () {
+	// Just to append id number for each row  
+	$('table tr:eq(0)').prepend('<th> ID </th>');
+
+	var id = 0;
+
+	$('table tr:gt(0)').each(function () {
+		id++;
+		$(this).prepend('<td>' + id + '</td>');
+	});
+});
+</script>
+</center>
+</div>  
+<style>
+  .game{  color: #eee;
+  font-family: 'Share Tech Mono', monospace;}
+</style>
+<div class="container" id="about">
+  <div class="col-sm-2 col-sm-offset-1">
+    <center><img src="anu.jpg" width="80px" height="80px" style="border-radius:100%;"></center>
+    <center>Anu</center>
+    <center>II year B.Tech(IT)</center>
+  </div>
+  <div class="col-sm-2">
+    <center><img src="vasanth.jpg" width="80px" height="80px" style="border-radius:100%;"></center>
+    <center>Vasanthan</center>
+    <center>II year B.Tech(ITS)</center>
+  </div>
+  <div class="col-sm-2">
+    <center><img src="rogith.jpg" width="80px" height="80px" style="border-radius:100%;"></center>
+    <center>Rogith</center>
+    <center>II year B.Tech(IT)</center>
+  </div>
+  <div class="col-sm-2">
+    <center><img src="naga.png" width="80px" height="80px" style="border-radius:100%;"></center>
+    <center>Naga Sanjay</center>
+    <center>II year B.Tech(IT)</center>
+  </div>
+  <div class="col-sm-2">
+    <center><img src="abishek.png" width="80px" height="80px" style="border-radius:100%;"></center>
+    <center>Abishek</center>
+    <center>II year B.Tech(IT)</center>
+  </div>
+</div>
+
+                <script>
+                  var level ;
+                 $(document).ready(function(){
+                  //leaderboard();
+                    profileget();
+                  });
+                  function profileget(){
+                    $.get("/profiles",function(data,status){
+                      $('#profile').html("<br><center>Avatar:<br><img src="+data.profile.avatar+" style='width:100px;height:100px;'></div></center><br><center>Name:&nbsp;"+data.profile.name+"</center><br><center>Level:&nbsp;&nbsp;"+data.profile.level+"</center><br>"); 
+                      level=data.profile.level;
+                    });
+                  }
+                  
+                   $('#leref').on('click',function(){
+                      $('#tableid').find('thead').remove();
+                      $('#tableid').find('tbody').remove();
+                      $('#table-id').find('thead').remove();
+                      $('#table-id').find('tbody').remove();
+                        leaderboard();
+                    });
+ 
+                  $('#leader').click(function(){
+                    $('#game').hide();
+                    $('#query'+level).hide();
+                    $('#profile').hide();
+                    $('#rules').hide();
+                    $('#about').hide();
+                    $('#quer').hide(); 
+                    $('.modal1').hide();
+                    $('#board').show();
+                  });
+                  $('#gam').click(function(){
+                    $('#board').hide();
+                    leaderboard();
+                    $('.modal1').hide();
+                    $('#rules').hide();
+                    $('#query'+level).hide();
+                    $('#profile').hide();
+                    $('#about').hide();
+                    $('#quer').hide(); 
+                    $('#game').show();
+                  });
+                  $('#queries').click(function(){
+                    leaderboard();
+                    $('#board').hide();
+                    $('#game').hide();
+                    $('#about').hide();
+                    $('#rules').hide();
+                    $('.modal1').hide();
+                    $('#profile').hide();
+                    $('#quer').show(); 
+                    $.get( "/query",function(data,status){
+                      level=data.que;
+                      $('#query'+level).show();
+                    });        
+                  });
+                  
+                  $('#pro').click(function(){
+                    $('#board').hide();
+                    $('#game').hide();
+                    leaderboard();
+                    $('#about').hide();
+                    $('#quer').hide(); 
+                    $('#rules').hide();
+                    $('.modal1').hide();
+                    $('#query'+level).hide();
+                    profileget();
+                    $('#profile').show();
+                  });
+                  $('#aboutus').click(function(){
+                    $('#game').hide();
+                    $('#query'+level).hide();
+                    $('#profile').hide();
+                    leaderboard();
+                    $('#quer').hide(); 
+                    $('#rules').hide();
+                    $('.modal1').hide();
+                    $('#board').hide();
+                    $('#about').show();
+                  });
+                  
+                  $('#rule').click(function(){
+                    $('#game').hide();
+                    $('#query'+level).hide();
+                    $('#profile').hide();
+                    $('#quer').hide(); 
+                    leaderboard();
+                    $('.modal1').hide();
+                    $('#board').hide();
+                    $('#about').hide();
+                    $('#rules').show();
+                  });
+                </script>
+                </div>
+</div>
+ 	  </body>
+	  </html>

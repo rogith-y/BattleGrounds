@@ -1,0 +1,146 @@
+/* Fonts */
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+/* Wrapper & Utilities */
+.wrapper-login {
+  background:url("");
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity:10;
+}
+
+
+/* Objects */
+.box-container {
+  width: 64px;
+  height: 64px;
+  background:none;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  -webkit-animation: in ease 1s forwards;
+          animation: in ease 1s forwards;
+}
+
+.plane {
+  font-size: 25px;
+  color: #354D62;
+  transition: all 1s ease;
+  opacity: 1;
+}
+
+/* Form Style */
+.form {
+  padding: 45px;
+  display: none;
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  display: none;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #354D62;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  display: none;
+}
+
+.button:hover, .form button:active, .form button:focus {
+  background: #48647F;
+}
+
+/* Animation Classes*/
+.active {
+  cursor: default;
+  -webkit-animation: open 1.5s ease forwards;
+          animation: open 1.5s ease forwards;
+}
+
+/* Animation Keyframes */
+@-webkit-keyframes open {
+  0% {
+    width: 64px;
+    height: 64px;
+  }
+  50% {
+    width: 320px;
+    height: 64px;
+  }
+  100% {
+    width: 400px;
+    height: 250px;
+  }
+}
+@keyframes open {
+  0% {
+    width: 64px;
+    height: 64px;
+  }
+  50% {
+    width: 320px;
+    height: 64px;
+  }
+  100% {
+    width: 400px;
+    height: 250px;
+  }
+}
+@-webkit-keyframes in {
+  0% {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+  }
+  60% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  80% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes in {
+  0% {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+  }
+  60% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  80% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}

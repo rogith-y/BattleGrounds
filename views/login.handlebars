@@ -1,0 +1,476 @@
+<html>
+  <head>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="csshake.min.css">
+<!-- or from surge.sh -->
+<link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+
+	
+
+<style>
+  @media only screen and (max-width: 600px) {
+  button.loginBtn {
+    font-size: 30px;
+  }
+}
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: center;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+.loginBtn--google {
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #DD4B39;
+}
+.loginBtn--google:before {
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+  background: #E74B37;
+}
+
+  /* Fonts */
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+/* Wrapper & Utilities */
+.wrapper-login {
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity:10;
+}
+/* Objects */
+.box-container {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  background:rgba(0, 0, 0, 0.0001);
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.7), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  -webkit-animation: in ease 1s forwards;
+          animation: in ease 1s forwards;
+}
+.plane {
+  font-size: 25px;
+  background:rgba(255,255,204,0.2)
+  transition: all 1s ease;
+  opacity: 1;
+}
+/* Form Style */
+.form {
+  padding: 50px;
+  display: none;
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #d8cece8c;
+  width: 20%;
+  border: 0;
+  margin: 0 0 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+  display: none;
+   border: 2px solid #111;
+}
+.button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  display: none;
+}
+::-webkit-input-placeholder {
+  font: 300 1em/1.5 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: rgba(17, 17, 17, 0.616);
+   font-weight: 800;
+  font-size: .8em;
+}
+.button:hover, .form button:active, .form button:focus {
+ 
+}
+/* Animation Classes*/
+.active {
+  cursor: default;
+  -webkit-animation: open 1.5s ease forwards;
+          animation: open 1.5s ease forwards;
+}
+
+/* Animation Keyframes */
+@-webkit-keyframes open {
+  0% {
+    width: 64px;
+    height: 64px;
+  }
+  50% {
+    width: 320px;
+    height: 64px;
+  }
+  100% {
+    width: 700px;
+    height: 550px;
+  }
+}
+@keyframes open {
+  0% {
+    width: 64px;
+    height: 64px;
+  }
+  50% {
+    width: 320px;
+    height: 64px;
+  }
+  100% {
+    width: 700px;
+    height: 550px;
+  }
+}
+@-webkit-keyframes in {
+  0% {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+  }
+  60% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  80% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes in {
+  0% {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+  }
+  60% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  80% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+/*button*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,800);
+*, *:before, *:after{
+  box-sizing: border-box;
+  padding: 0; margin: 0;
+  font: 300 1em/1.5 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  text-decoration: none;
+  color: #111;
+}
+html, body{background-image:url("back.png");
+  background-size: cover;
+  color: #eee;}
+  section.container{
+    min-width: 500px;
+    margin: 20px;
+    text-align: center;
+  }
+    a:hover{border-bottom: 1px solid #111;} 
+    h1{font-size: 2em; padding: 20px 0;}
+    p{
+      font-size: .75em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 20px 0;
+    }
+    button:hover{cursor: pointer}
+    button {
+      background: transparent; outline: none;
+      position: relative;
+      border: 2px solid #111;
+      padding: 15px 50px;
+      overflow: hidden;
+    }
+    /*button:before (attr data-hover)*/
+    button:hover:before{opacity: 1; -webkit-transform: translate(0,0); transform: translate(0,0);}
+    button:before{
+      content: attr(data-hover);
+      position: absolute;
+      top: 1.1em; left: 0;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 800;
+      font-size: .8em;
+      opacity: 0;
+      -webkit-transform: translate(-100%,0);
+              transform: translate(-100%,0);
+      transition: all .3s ease-in-out;
+    }
+      /*button div (button text before hover)*/
+      button:hover div{opacity: 0; -webkit-transform: translate(100%,0); transform: translate(100%,0)}
+      button div{
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 800;
+        font-size: .8em;
+        transition: all .3s ease-in-out;
+      }
+/**********************BIOS MENUUUUUUUUUUUUUUU***************/
+@font-face {
+  font-family: 'DOS';
+  font-style: normal;
+  font-weight: normal;
+  font-smooth: never;
+  src: url("https://rawgit.com/kristopolous/BOOTSTRA.386/master/v2.3.1/fonts/Fixedsys500c.eot");
+  src: url("https://rawgit.com/kristopolous/BOOTSTRA.386/master/v2.3.1/fonts/Fixedsys500c.woff") format("woff"), url("https://rawgit.com/kristopolous/BOOTSTRA.386/master/v2.3.1/fonts/Fixedsys500c.ttf") format("truetype"), url("https://rawgit.com/kristopolous/BOOTSTRA.386/master/v2.3.1/fonts/Fixedsys500c.svg") format("svg");
+}
+nav {
+  background-color: #4224F3;
+  width: 80%;
+  max-width: 480px;
+  margin: 100px fixed 0;
+  margin-left: 360px;
+  box-shadow: 20px 20px black;
+  padding: 15px;
+  position: relative;
+}
+h1 {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  background: #4224F3;
+  top: -5px;
+  padding: 0 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: inline;
+  white-space: nowrap;
+}
+h1::after, h1::before {
+  content: ' ***** ';
+}
+@media (max-width: 400px) {
+  h1::after, h1::before {
+    content: ' *** ';
+  }
+}
+ul {
+  list-style: none;
+  border: double 4px white;
+  margin: 0;
+  padding: 15px;
+}
+li:hover {
+  background-color: #34C0F9;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;  
+  display: block;
+  padding: 6px 0 6px 6px;
+}
+a:hover {
+  color: #4224F3;
+}
+a:focus {
+  color: yellow;
+}
+ @font-face {
+  font-family: 'MyWebFont';
+  font-color:white;
+  src:url('font2.otf') format('opentype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+} 
+.arrow{
+  position: absolute;
+  left:35%;
+  top:30%;
+  -webkit-transform: rotate(25deg);
+  height: 100px;
+  width: 80px;
+}
+</style>
+  </head>
+  <body><img class="arrow" src="data:image/svg+xml;base64,
+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDM1OS44NDcgMzU5Ljg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzU5Ljg0NyAzNTkuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+PGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNS4xNjQsMTQ3Ljc5N2MtMy42NzIsNi4xMi02LjczMiwxNi41MjQtNC4yODQsMjMuODY4YzEuMjI0LDIuNDQ4LDQuMjg0LDIuNDQ4LDQuODk2LDAgICAgYzEuMjI0LTMuNjcyLDAuNjEyLTcuMzQ0LDAuNjEyLTExLjAxNmMwLTMuNjcyLDAuNjEyLTcuMzQ0LDEuODM2LTExLjAxNkM5LjQ0OCwxNDcuMTg1LDYuMzg4LDE0NS45NjEsNS4xNjQsMTQ3Ljc5N3oiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZDRkJGQiIgZGF0YS1vbGRfY29sb3I9IiNGOEY1RjUiPjwvcGF0aD4KCQk8cGF0aCBkPSJNMTguNjI3LDIxNy41NjVjLTEuMjI0LTMuNjcyLTQuODk2LTYuNzMxLTcuMzQ0LTkuNzkyYy0zLjA2LTQuMjg0LTYuMTItOS4xOC02LjczMi0xNC42ODhjMC0xLjIyNS0xLjgzNi0xLjIyNS0xLjgzNiwwICAgIGMwLDUuNTA4LDEuMjI0LDEwLjQwMywzLjA2LDE1LjkxMmMxLjgzNiw0LjI4Myw0Ljg5Niw5Ljc5Miw5Ljc5MiwxMS42MjhDMTcuNDA0LDIyMS4yMzcsMTkuMjQsMjE5LjQwMSwxOC42MjcsMjE3LjU2NXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZDRkJGQiIgZGF0YS1vbGRfY29sb3I9IiNGOEY1RjUiPjwvcGF0aD4KCQk8cGF0aCBkPSJNNjQuNTI4LDIyNi4xMzRjLTMuMDYtMi40NDgtNi43MzItMy42NzItOS4xOC02LjczMmMtMi40NDgtMS44MzYtNC4yODQtNC44OTYtNi4xMi03Ljk1NiAgICBjLTAuNjEyLTEuMjI0LTMuNjcyLTAuNjExLTMuMDYsMS4yMjVjMy4wNiw2LjczMSw3LjM0NCwxNS4zLDE0LjY4OCwxNy4xMzZjLTcuOTU2LDEuMjI0LTE0LjY4OCw0LjI4NC0yMi42NDQsMC42MTIgICAgYy0wLjYxMi0wLjYxMi0xLjIyNCwxLjIyNC0wLjYxMiwxLjIyNGM3LjM0NCwzLjY3MiwxOC45NzIsNC44OTYsMjYuMzE2LDAuNjEyYzEuMjI0LTAuNjEyLDEuMjI0LTIuNDQ4LDAtMy4wNjEgICAgQzY1Ljc1MSwyMjkuMTkzLDY1Ljc1MSwyMjYuNzQ2LDY0LjUyOCwyMjYuMTM0eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkNGQkZCIiBkYXRhLW9sZF9jb2xvcj0iI0Y4RjVGNSI+PC9wYXRoPgoJCTxwYXRoIGQ9Ik05Ni4zNTIsMTk0LjkyMmMtMi40NDgsNC4yODQtMy42NzIsOC41NjctNi4xMiwxMi44NTJjLTIuNDQ4LDQuMjg0LTUuNTA4LDguNTY4LTguNTY4LDEyLjI0ICAgIGMtMS4yMjQsMS4yMjQsMC42MTIsMy4wNiwxLjgzNiwxLjgzNmM3LjM0NC02LjEyLDE1LjMtMTUuOTEyLDE3LjEzNi0yNS43MDRDMTAxLjI0OCwxOTQuMzEsOTguMTg4LDE5Mi40NzQsOTYuMzUyLDE5NC45MjJ6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGQ0ZCRkIiIGRhdGEtb2xkX2NvbG9yPSIjRjhGNUY1Ij48L3BhdGg+CgkJPHBhdGggZD0iTTkzLjkwNCwxNzUuOTQ5Yy0zLjY3Mi00Ljg5Ni03LjM0NC0xMC40MDQtMTIuODUyLTEzLjQ2NGMtMi40NDgtMS4yMjQtNS41MDgsMS4yMjQtNC4yODQsNC4yODQgICAgYzMuMDYsNS41MDgsOS4xOCw5LjE4LDEzLjQ2NCwxMi44NTJDOTIuNjgsMTgwLjIzMyw5NS4xMjcsMTc3Ljc4NSw5My45MDQsMTc1Ljk0OXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZDRkJGQiIgZGF0YS1vbGRfY29sb3I9IiNGOEY1RjUiPjwvcGF0aD4KCQk8cGF0aCBkPSJNNTUuOTU5LDE3Mi44ODljLTMuNjcyLDMuMDYtNi4xMiw2LjczMi04LjU2OCwxMS4wMTZjLTEuODM2LDMuNjczLTQuODk2LDcuOTU2LTUuNTA4LDExLjYyOCAgICBjLTAuNjEyLDIuNDQ4LDIuNDQ4LDQuODk2LDQuMjg0LDIuNDQ4YzIuNDQ4LTMuMDYsMy42NzItNi43MzEsNC44OTYtOS43OTJjMS44MzYtNC44OTYsMy42NzItOS4xOCw3LjM0NC0xMi44NTIgICAgQzYwLjI0NCwxNzMuNTAxLDU3Ljc5NiwxNzEuNjY1LDU1Ljk1OSwxNzIuODg5eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkNGQkZCIiBkYXRhLW9sZF9jb2xvcj0iI0Y4RjVGNSI+PC9wYXRoPgoJCTxwYXRoIGQ9Ik0xMjUuNzI4LDIzMS42NDJjLTEwLjQwNCw0Ljg5Ni0xOC4zNiw2LjEyLTI5LjM3NiwzLjY3MmMtMi40NDgtMC42MTEtMy42NzIsMy4wNjEtMS4yMjQsMy42NzIgICAgYzExLjYyOCwzLjY3MiwyNC40OCw1LjUwOSwzNC4yNzItMy4wNkMxMzEuODQ4LDIzNC4wOSwxMjguMTc2LDIzMC40MTgsMTI1LjcyOCwyMzEuNjQyeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkNGQkZCIiBkYXRhLW9sZF9jb2xvcj0iI0Y4RjVGNSI+PC9wYXRoPgoJCTxwYXRoIGQ9Ik0xODUuNzA0LDIwMy40ODljLTYuNzMyLDMuNjczLTEyLjI0LDkuMTgxLTE4LjM2LDEzLjQ2NWMtNC4yODQtNS41MDktMTEuMDE2LTEwLjQwNC0xNy4xMzYtMTIuODUzICAgIGMtMi40NDgtMS4yMjQtNC4yODQsMS44MzYtMS44MzYsMy42NzJjNS41MDgsMy42NzIsOS43OTIsOC41NjgsMTQuNjg4LDEyLjg1M2MtMS4yMjQsMS44MzYsMC42MTIsNC4yODQsMy4wNiwzLjA2ICAgIGMwLDAsMC42MTIsMCwwLjYxMi0wLjYxMmwwLDBjMS4yMjQsMC42MTIsMy4wNiwwLDMuMDYtMS44MzZjNy4zNDQtMy42NzIsMTUuMy03Ljk1NiwxOS41ODQtMTQuNjg4ICAgIEMxOTEuMjEyLDIwNC43MTQsMTg4LjE1MiwyMDIuMjY2LDE4NS43MDQsMjAzLjQ4OXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZDRkJGQiIgZGF0YS1vbGRfY29sb3I9IiNGOEY1RjUiPjwvcGF0aD4KCQk8cGF0aCBkPSJNMjA0LjA2NCwxNTkuNDI1Yy0yLjQ0OCwzLjA2LTMuMDYxLDcuMzQ0LTQuODk2LDExLjAxNmMtMS44MzYsNS41MDgtMy42NzIsMTAuNDA0LTcuMzQ0LDE0LjY4OCAgICBjLTEuMjI0LDEuODM2LDAuNjEyLDQuMjg0LDIuNDQ4LDIuNDQ4YzMuNjcyLTMuNjczLDYuNzMxLTcuMzQ1LDkuMTgtMTIuMjQxYzIuNDQ4LTQuMjg0LDUuNTA4LTkuNzkyLDQuODk2LTE0LjY4OCAgICBDMjA4LjM0OSwxNTkuNDI1LDIwNS45LDE1Ny41ODksMjA0LjA2NCwxNTkuNDI1eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkNGQkZCIiBkYXRhLW9sZF9jb2xvcj0iI0Y4RjVGNSI+PC9wYXRoPgoJCTxwYXRoIGQ9Ik0xOTguNTU2LDEzOC4wMDVjLTMuMDYtNy45NTYtNi43MzEtMTQuNjg4LTEzLjQ2NC0xOS41ODRjLTEuODM2LTEuMjI0LTQuMjg0LDEuMjI0LTMuMDYsMy4wNiAgICBjMy42NzIsNi43MzIsOC41NjgsMTIuODUyLDEyLjI0LDE4Ljk3MkMxOTYuMTA4LDE0My41MTMsMTk5Ljc4LDE0MS4wNjUsMTk4LjU1NiwxMzguMDA1eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkNGQkZCIiBkYXRhLW9sZF9jb2xvcj0iI0Y4RjVGNSI+PC9wYXRoPgoJCTxwYXRoIGQ9Ik0xNjQuODk2LDExMi4zMDFjLTEwLjQwNC0wLjYxMi0yMi4wMzIsNC4yODQtMjcuNTQsMTIuODUyYy0xLjgzNiwyLjQ0OCwxLjIyNCw1LjUwOCwzLjY3MiwzLjY3MiAgICBjNy45NTYtNC44OTYsMTQuMDc2LTEyLjI0LDIzLjg2OC0xMy40NjRDMTY3LjM0NCwxMTUuMzYxLDE2Ny4zNDQsMTEyLjMwMSwxNjQuODk2LDExMi4zMDF6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGQ0ZCRkIiIGRhdGEtb2xkX2NvbG9yPSIjRjhGNUY1Ij48L3BhdGg+CgkJPHBhdGggZD0iTTE0MC40MTYsMTY4LjYwNWMtMC42MTItNC4yODQsMC04LjU2OCwxLjIyNC0xMi44NTJjMC42MTItMi40NDgtMi40NDgtMy4wNi0zLjY3Mi0xLjIyNCAgICBjLTMuMDYsNy45NTYtNi4xMiwxOS41ODQtMC42MTIsMjYuOTI4YzEuODM2LDEuODM3LDQuODk2LDEuMjI1LDQuODk2LTEuMjI0QzE0Mi4yNTEsMTc2LjU2MSwxNDEuMDI4LDE3Mi44ODksMTQwLjQxNiwxNjguNjA1eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkNGQkZCIiBkYXRhLW9sZF9jb2xvcj0iI0Y4RjVGNSI+PC9wYXRoPgoJCTxwYXRoIGQ9Ik0yMjQuODcyLDIzNC43MDJjLTExLjYyOCwxLjIyNC0yMi42NDQsNC4yODMtMzQuMjcxLDEuMjI0Yy0xLjgzNi0wLjYxMi0yLjQ0OCwyLjQ0OC0wLjYxMiwzLjA2ICAgIGMxMS4wMTYsNC4yODQsMjUuMDkyLDUuNTA5LDM2LjEwOCwxLjIyNUMyMjguNTQ0LDIzOC45ODUsMjI4LjU0NCwyMzQuMDksMjI0Ljg3MiwyMzQuNzAyeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkNGQkZCIiBkYXRhLW9sZF9jb2xvcj0iI0Y4RjVGNSI+PC9wYXRoPgoJCTxwYXRoIGQ9Ik0yNzMuMjIsMjMyLjI1NGMtNi4xMTktMS4yMjUtMTIuODUyLDAtMTkuNTg0LDAuNjExYy0yLjQ0NywwLTIuNDQ3LDMuNjczLDAsMy42NzNjNi43MzIsMC42MTEsMTMuNDY1LDEuODM2LDE5LjU4NCwwLjYxMSAgICBDMjc1LjA1NiwyMzUuOTI2LDI3NS4wNTYsMjMyLjI1NCwyNzMuMjIsMjMyLjI1NHoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZDRkJGQiIgZGF0YS1vbGRfY29sb3I9IiNGOEY1RjUiPjwvcGF0aD4KCQk8cGF0aCBkPSJNMzEzLjYxMiwyMjguNTgyYy0zLjA2MSwwLTYuNzMyLDEuMjI0LTkuNzkyLDIuNDQ3Yy00LjI4NCwwLjYxMi03Ljk1NiwxLjIyNS0xMi4yNCwxLjgzNmMtMi40NDgsMC0yLjQ0OCwzLjY3MywwLDMuNjczICAgIGM2LjczMiwwLjYxMSwxOC4zNiwyLjQ0NywyMy44NjgtMy4wNjFDMzE2LjY3MiwyMzEuNjQyLDMxNi4wNjEsMjI4LjU4MiwzMTMuNjEyLDIyOC41ODJ6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGQ0ZCRkIiIGRhdGEtb2xkX2NvbG9yPSIjRjhGNUY1Ij48L3BhdGg+CgkJPHBhdGggZD0iTTM1OC4yODgsMjI0LjI5OGMtNy4zNDQtNS41MDgtMTQuMDc2LTExLjYyOC0yMS40Mi0xNy4xMzZjLTYuMTItNC44OTYtMTIuMjQtMTEuMDE3LTIwLjE5Ni0xMS42MjkgICAgYy0zLjA2LDAtNS41MDgsMy42NzMtMy42NzIsNi4xMmM0Ljg5Niw2LjEyLDEyLjg1Myw5Ljc5MiwxOC45NzIsMTQuNjg4YzQuMjg0LDMuNjcyLDguNTY4LDcuMzQ0LDEzLjQ2NSwxMS4wMTYgICAgYy05Ljc5Miw0Ljg5Ni0xOC45NzMsOS43OTItMjkuMzc2LDEyLjg1M2MtNC4yODQsMS44MzYtMi40NDgsNy45NTYsMS44MzYsNy4zNDRjMTQuMDc1LTIuNDQ4LDI2LjkyOC05LjE4LDM5Ljc3OS0xNC42ODggICAgQzM2MC4xMjQsMjMxLjAyOSwzNjAuNzM2LDIyNi4xMzQsMzU4LjI4OCwyMjQuMjk4eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkNGQkZCIiBkYXRhLW9sZF9jb2xvcj0iI0Y4RjVGNSI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=" />
+<div class="wrapper-login">
+    <div class="box-container">
+      <div class="shake-slow shake-constant shake-constant--hover"><div class="plane">
+      
+<img src="army.png" width="60" height="50" />
+      </div>
+       
+      </div>
+
+      <div class="form">
+        <center><div style="font-family:'MyWebFont';color:white;font-size:50px;">BATTLEGROUNDS</div></center>
+    <a data-toggle="collapse" href="#local-sign-in" id="log" role="button"><section class="container">
+  <button data-hover="Fire in the Hole!" style="background-color:  rgba(100, 99, 96, 0.808);"><div>&emsp;&emsp;Login&emsp;&emsp;</div></button>
+</section></a>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#reg').click(function(){
+          $('#reg').hide();
+          $('#log').show();
+          $('#local-sign-in').hide();
+          $('#local-reg').show();
+        });
+      });
+    </script>
+        <script type="text/javascript">
+      $(document).ready(function(){
+        $('#log').click(function(){
+          $('#log').hide();
+          $('#reg').show();
+          $('#local-sign-in').show();
+          $('#local-reg').hide();
+        });
+      });
+    </script>
+    
+    <a data-toggle="collapse" href="#local-reg" id="reg" class="" role="button"><section class="container">
+  <button data-hover="Enter the Battleground!" style="background-color: rgba(100, 99, 96, 0.808);"><div>&emsp;&emsp;&emsp;&emsp;Sign Up&emsp;&emsp;&emsp;&emsp;</div></button>
+</section></a>
+<br>
+  <form id="local-sign-in" class="collapse" action="/login" method="post">
+    <div>
+       
+      
+        <input type="email" id="mail" name="username" placeholder="Email Id"/ required>
+    </div>
+    <div>
+        <input type="password" placeholder="Password" name="password"/ required>
+    </div>
+    <div>
+      <section class="container">
+  <button data-hover="Fire in hole!"  style="background-color: rgba(100, 99, 96, 0.808);"><div>&emsp;&emsp;Login&emsp;&emsp;</div></button>
+</section></a>
+    </div>
+  </form>
+  <form id="local-reg" class="collapse" action="/local-reg" method="post">
+    <div>
+        <input type="email" id="mail1" name="username" placeholder="Email Id"/ required>
+    </div>
+    <script>
+      var email = document.getElementById("mail");
+email.addEventListener("input", function (event) {
+  if (email.validity.typeMismatch) {
+    email.setCustomValidity("I expect an e-mail, darling!");
+  } else {
+    email.setCustomValidity("");
+  }
+});
+    </script>
+    <script>
+      var email = document.getElementById("mail1");
+email.addEventListener("input", function (event) {
+  if (email.validity.typeMismatch) {
+    email.setCustomValidity("I expect an e-mail, darling!");
+  } else {
+    email.setCustomValidity("");
+  }
+});
+    </script>
+    <div>
+       
+        <input type="password" name="password" id="password" placeholder="Password"/ >
+    </div>
+    <div>
+        
+        <input type="password" name="cpassword" id="confirm_password" placeholder="Confirm Password"/ >
+        <span id='message'></span>
+    </div><br>                
+    <script type="text/javascript">
+      $('#password, #confirm_password').on('keyup', function () {
+  if ($('#password').val() == $('#confirm_password').val()) {
+    $('#message').html('<br>Matching').css('color', 'green');
+  } else 
+    $('#message').html('<br>Not Matching').css('color', 'red');
+});
+    </script>
+    <script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm_password").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+</script>
+    <section class="container">
+  <button data-hover="Enter the Battleground!" onclick="return Validate()" type="submit" style="background-color: rgba(100, 99, 96, 0.808);"><div>&emsp;&emsp;&emsp;&emsp;Sign Up&emsp;&emsp;&emsp;&emsp;</div></button>
+        
+    </section>
+  </form>
+<a href="/auth/google"><button class="loginBtn loginBtn--google" style="width:330px;font-size:20px; height:50px;">
+  Login with Google
+</button></a>
+      </div>
+    </div>                                                          
+    </div>
+    <script>
+  $('.box-container').click(function() {
+  $(this).addClass('active');
+  $('.plane').remove();
+  $('.form').delay( 1000 ).fadeIn( 700 );
+  $('.form input').delay( 1000 ).fadeIn( 700 );
+  $('.button').delay( 1000 ).fadeIn( 700 );
+}); </script>
+    </body>
+    </html>

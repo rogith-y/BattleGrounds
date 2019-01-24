@@ -1,0 +1,142 @@
+   <html>
+  <title>Battlegrounds</title>
+	<head>  
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.10.2/bodymovin_light.min.js"></script>
+        <script src="https://unpkg.com/classnames@2.2.5"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script src="//static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js"></script><script src="//static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script><meta charset="UTF-8"><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico"><link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111"><link rel="canonical" href="https://codepen.io/yasser-mas/pen/pyWPJd">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <link rel="canonical" href="https://codepen.io/bradtraversy/pen/zEOrPp">
+    <script type="text/javascript" async="" src="https://cdn.heapanalytics.com/js/heap-2625472963.js"></script> 
+    <script type="text/javascript" charset="utf-8" async="" src="https://static.codepen.io/assets/packs/0-0290855ab977e8ae720a.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+   <link rel="icon" href="icon.png" type="image/png" sizes="16x16"> 
+</head>
+<body>
+<img src="w4.gif" style="width:100%;height:100%;position:fixed;">
+<div id="mod">
+<style class="cp-pen-styles">
+  :root {
+  --modal-duration: 1s;
+  --modal-color: #cabc42;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 10%;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: 10% auto;
+  width: 60%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background: #fff;
+  color: var(--modal-color);
+}
+
+.modal-footer {
+  background: var(--modal-color);
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.ans-close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.ans-close:hover,
+.ans-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.container #quer{
+  width:50%;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <div id="my-modal" class="modal" style="display: block;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <center><h2>CONGRATS!</h2></center>  
+      </div>
+      <div class="modal-body">      
+          <center><h1>For further details visit <b><a href="https://itrix.in" target="_blank">itrix.in</a></b></h1></center>
+      </div>
+      <div class="modal-footer">
+        <h3><a href="/logout"><button class="btn btn-primary">LOGOUT</button></a></h3>
+      </div>
+    </div>
+  </div>
+<script>// Get DOM Elements
+    $(document).ready(function(){
+        $('#my-modal').hide();
+    });
+setInterval(function(){
+        $('#my-modal').show();
+//# sourceURL=pen.js
+},5000);
+</script>
+
+</body>
